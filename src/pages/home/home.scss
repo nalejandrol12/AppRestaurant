@@ -1,3 +1,50 @@
 page-home {
-
+    .content_image_sign {
+      margin: 10% 0% 10% 0%;
+    }
+    .content_image_sign,
+    .btn_sign_in {
+      text-align: center;
+      width: 100%;
+    }
+    .icono {
+      width: 35%;
+      height: 30%;
+      border-radius: 20px;
+    }
+    .btn_in {
+      width: 100%;
+      font-size: 20px;
+      background: #333;
+    }
+    .btn_sign_in {
+      margin-top: 10%;
+    }
+    .txt_register {
+      margin-top: 10%;
+      text-align: center;
+    }
+    .etq_register {
+      font-size: 20px;
+    }
+    .a_register {
+      text-decoration: #F23333;
+      color: #F23333;
+    }
+    .item {
+      color: #333;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    .item-input .label-md{
+      color: #333;
+    }
+    .header, .toolbar, .toolbar-background{
+      background: #F23333;
+    }
+  
+    .toolbar-title{
+      color: #fff;
+    }
 }
+  

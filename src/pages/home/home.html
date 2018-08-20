@@ -1,14 +1,39 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Inicia Sesión
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="container_sign_in">
+
+  <div class="content_image_sign">
+    <img src="assets/imgs/icon_login.png" alt="" class="icono">
+  </div>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="btn_sign_in">
+    <button ion-button round class="btn_in" (click)="onAdd();">Login</button>
+  </div>
+
+  <div class="txt_register">
+    <p class="etq_register">No tienes una cuenta?, Regístrate 
+      <a class="a_register" (click)="NavigationSelect(2);">aquí</a>
+    </p>
+  </div>
+
 </ion-content>

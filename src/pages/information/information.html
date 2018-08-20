@@ -1,0 +1,62 @@
+<!--
+  Generated template for the InformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Información</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="container_information">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/imgs/imagen_catalogo.jpg">
+      </ion-col>
+      <ion-col col-8>
+        <h2 class="title_combo">Combo croissant</h2>
+        <button ion-button>
+          Agregar más
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="txt_description">El combo viene con un croissant y una bebida a elegir.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="txt_cash">Precio: 3000$</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="txt_juice">Escoge bebida: </p>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="NavigationSoftDrinks();">
+          Bebida
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="btns">
+      <ion-col col-6>
+        <button ion-button class="btn_add" (click)="showToast('top');">
+          Añadir
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button class="btn_verify" (click)="NavigationInformationRequested();">
+          Ver pedido
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
