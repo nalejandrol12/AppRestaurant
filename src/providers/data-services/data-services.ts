@@ -12,7 +12,8 @@ export class DataServicesProvider {
 
   private _registerUrl = "http://localhost:3001/api/signup";
   private _loginUrl = "http://localhost:3001/api/signin";
-  private _localUrl = "http://localhost:3001/api/local"
+  private _localUrl = "http://localhost:3001/api/local";
+  private _productUrl = "http://localhost:3001/api/product/";
 
   constructor(public http: HttpClient) {
     console.log('Hello DataServicesProvider Provider');
@@ -30,6 +31,10 @@ export class DataServicesProvider {
 
   getLocal(){
     return this.http.get<any>(this._localUrl);
+  }
+
+  getProduct(data:string){
+    return this.http.get<any>(this._productUrl+data);
   }
 
 }
