@@ -10,10 +10,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataServicesProvider {
 
-  private _registerUrl = "http://localhost:3001/api/signup";
-  private _loginUrl = "http://localhost:3001/api/signin";
-  private _localUrl = "http://localhost:3001/api/local";
-  private _productUrl = "http://localhost:3001/api/product/";
+  private _registerUrl = "https://app-restaurante.herokuapp.com/api/signup";
+  private _loginUrl = "https://app-restaurante.herokuapp.com/api/signin";
+  private _localUrl = "https://app-restaurante.herokuapp.com/api/local";
+  private _productUrl = "https://app-restaurante.herokuapp.com/api/product/";
 
   constructor(public http: HttpClient) {
     console.log('Hello DataServicesProvider Provider');
