@@ -14,8 +14,7 @@ page-restaurant {
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    border: 2px solid #333;
+    border: 2px solid #F23333;
   }
   .header, .toolbar, .toolbar-background{
     background: #F23333;
@@ -25,9 +24,13 @@ page-restaurant {
   }
   .h2_text{
     text-transform: capitalize;
+    width: 20%;
   }
-  .div_restaurtant{
+  .div_restaurtant, .div_information{
     display: flex;
     flex-wrap: wrap;
+  }
+  .div_information{
+    padding: 10px 0px 0px 0px;
   }
 }

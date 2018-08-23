@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { LoadingController, NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register'
 import { RestaurantPage } from '../restaurant/restaurant';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
@@ -16,7 +16,7 @@ export class HomePage {
   private password: string;
 
   constructor(public navCtrl: NavController, public dataService: DataServicesProvider,
-    public storage: Storage, public alerCtrl: AlertController) {
+    public storage: Storage, public alerCtrl: AlertController, public loadingCtrl: LoadingController) {
 
   }
 
@@ -26,7 +26,7 @@ export class HomePage {
       this.storage.get('token').then((val) => {
         if(val != ''){
           this.storage.remove('token');
-          this.NavigationSelect(1);
+          this.presentLoadingCustom();
         }
       });
     },
@@ -65,6 +65,23 @@ export class HomePage {
     }
 
     alert.present()
+  }
+
+  presentLoadingCustom() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'crescent',
+      content: 'Ingresando....'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      this.NavigationSelect(1);
+    }, 1000);
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 2000);
   }
 
 }
