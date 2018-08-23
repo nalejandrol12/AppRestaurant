@@ -18,8 +18,11 @@ import { SoftDrinksPage } from '../soft-drinks/soft-drinks';
 })
 export class InformationPage {
 
+  item;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,
      public toastCtrl: ToastController) {
+      this.item = navParams.data.item;
   }
 
   ionViewDidLoad() {

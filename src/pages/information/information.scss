@@ -1,35 +1,44 @@
 page-information {
-    .container_information{
-        background-color: #F23333;
-    }
-    img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 2px solid #333;
-        margin-top: -9px;
-    }
-    .title_combo{
-        margin-top: 15px;
-        font-size: 170%;
-    }
-    .txt_description{
-        font-size: 20px;
-    }
-    .txt_cash, .txt_juice{
-        font-size: 23px;
-    }
-    .txt_juice{
-        margin-top: 3px;
-    }
-    .txt_cash{
-        margin-top: -1px;
-    }
-    .btn_verify, .btn_add{
-        font-size: 19px;
-        width: 150px;
-    }
-    .btns{
-        margin-top: 10%;
-    }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin-top: -9px;
+  }
+  .title_combo {
+    margin-top: 15px;
+    font-size: 170%;
+    padding: 20px 10px 0px 0px;
+  }
+  .txt_description {
+    font-size: 20px;
+    text-align: justify;
+  }
+  .txt_cash,
+  .txt_juice {
+    font-size: 23px;
+  }
+  .txt_juice {
+    margin-top: 3px;
+  }
+  .txt_cash {
+    margin-top: -1px;
+  }
+  .btn_verify,
+  .btn_add {
+    font-size: 19px;
+    width: 150px;
+  }
+  .btns {
+    margin-top: 10%;
+  }
+  .header,
+  .toolbar,
+  .toolbar-background {
+    background: #F23333;
+  }
+  .toolbar-title{
+    color: #fff;
+  }
 }

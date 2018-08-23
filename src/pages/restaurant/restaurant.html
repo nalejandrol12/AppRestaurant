@@ -26,20 +26,23 @@
           <ion-card-content>
             <ion-grid>
               <ion-row>
+                <div class="div_restaurtant">
+                  <ion-col col-4>
+                    <ion-thumbnail item-start>
+                      <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
+                    </ion-thumbnail>
+                  </ion-col>
 
-                <ion-col col-4>
-                  <ion-thumbnail item-start>
-                    <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
-                  </ion-thumbnail>
-                </ion-col>
-
-                <ion-col col-5>
-                  <h1 class="h2_text">{{item.name}} <ion-icon name="star-outline" item-end></ion-icon></h1>
-                  <div class="div_information">
-                    <p>{{item.description}}</p>
-                    <h2>Horario: {{item.schedule}}</h2>
-                  </div>
-                </ion-col>
+                  <ion-col col-5>
+                    <h1 class="h2_text">{{item.name}}
+                      <ion-icon name="star-outline" item-end></ion-icon>
+                    </h1>
+                    <div class="div_information">
+                      <p>{{item.description}}</p>
+                      <h2>Horario: {{item.schedule}}</h2>
+                    </div>
+                  </ion-col>
+                </div>
 
                 <ion-col col-12>
                   <button ion-button full item-end (click)="NavigationMenuPage(item);" class="div_add">

@@ -54,8 +54,8 @@ export class MenuPage {
     })
   }
 
-  NavigationHistoryInformationPage() {
-    this.navCtrl.push(InformationPage);
+  NavigationHistoryInformationPage(item) {
+    this.navCtrl.push(InformationPage, { item: item });
   }
 
 }

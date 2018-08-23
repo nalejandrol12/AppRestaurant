@@ -17,23 +17,20 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <img src="assets/imgs/imagen_catalogo.jpg">
+        <img src="../../assets/imgs/imagen_combo.jpg">
       </ion-col>
       <ion-col col-8>
-        <h2 class="title_combo">Combo croissant</h2>
-        <button ion-button>
-          Agregar más
-        </button>
+        <h2 class="title_combo">{{item.name}}</h2>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <p class="txt_description">El combo viene con un croissant y una bebida a elegir.</p>
+        <p class="txt_description">{{item.description}}</p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <p class="txt_cash">Precio: 3000$</p>
+        <p class="txt_cash">Precio: {{item.price}}$</p>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -54,7 +51,7 @@
       </ion-col>
       <ion-col col-6>
         <button ion-button class="btn_verify" (click)="NavigationInformationRequested();">
-          Ver pedido
+          Nota
         </button>
       </ion-col>
     </ion-row>

@@ -26,4 +26,8 @@ page-restaurant {
   .h2_text{
     text-transform: capitalize;
   }
+  .div_restaurtant{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
