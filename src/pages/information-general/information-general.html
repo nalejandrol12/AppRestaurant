@@ -1,0 +1,48 @@
+<!--
+  Generated template for the InformationGeneralPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Información</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="container_information">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/imgs/imagen_combo.jpg">
+      </ion-col>
+      <ion-col col-8>
+        <h2 class="title_combo">{{item.name}}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="txt_description">{{item.description}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="txt_cash">Precio: {{item.price}}$</p>
+      </ion-col>
+    </ion-row>
+    <div class="div_notas">
+      <h2>Notas</h2>
+    </div>
+    <ion-item>
+      <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+    </ion-item>
+    <div class="btns">
+      <button ion-button class="btn_add">
+        Añadir
+      </button>
+    </div>
+  </ion-grid>
+</ion-content>

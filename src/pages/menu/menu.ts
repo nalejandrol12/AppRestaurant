@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { InformationPage } from '../information/information'
+import { InformationPage } from '../information/information';
+import { InformationGeneralPage } from '../information-general/information-general';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
 
 /**
@@ -35,17 +36,17 @@ export class MenuPage {
   onGet() {
     this.dataService.getProduct(this.item._id).subscribe(res => {
       this.listHistory = res;
-      for(let i of this.listHistory){
-        if(i.category === "TIPICO"){
+      for (let i of this.listHistory) {
+        if (i.category === "TIPICO") {
           this.listTipico[this.listTipico.length] = i;
         }
-        if(i.category === "COMBOS"){
+        if (i.category === "COMBOS") {
           this.listCombo[this.listCombo.length] = i;
         }
-        if(i.category === "BEBIDAS"){
+        if (i.category === "BEBIDAS") {
           this.listBebida[this.listBebida.length] = i;
         }
-        if(i.category === "BEBIDAS ALCOHOLICAS"){
+        if (i.category === "BEBIDAS ALCOHOLICAS") {
           this.listAlcoholica[this.listAlcoholica.length] = i;
         }
       }
@@ -54,8 +55,12 @@ export class MenuPage {
     })
   }
 
-  NavigationHistoryInformationPage(item) {
-    this.navCtrl.push(InformationPage, { item: item });
+  NavigationHistoryInformationPage(item, num: any) {
+    if (num != 0) {
+      this.navCtrl.push(InformationPage, { item: item });
+    } else {
+      this.navCtrl.push(InformationGeneralPage, { item: item });
+    }
   }
 
 }

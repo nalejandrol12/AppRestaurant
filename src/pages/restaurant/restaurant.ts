@@ -19,7 +19,8 @@ export class RestaurantPage {
 
   private listHistory: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: DataServicesProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public dataService: DataServicesProvider) {
   }
 
   ionViewDidLoad() {

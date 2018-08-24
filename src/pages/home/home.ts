@@ -24,7 +24,7 @@ export class HomePage {
     this.dataService.addLogin(this.email, this.password).subscribe(res => {
       this.storage.set('token', res.token);
       this.storage.get('token').then((val) => {
-        if(val != ''){
+        if (val != '') {
           this.storage.remove('token');
           this.presentLoadingCustom();
         }
@@ -41,7 +41,8 @@ export class HomePage {
 
   NavigationSelect(data: any) {
     if (data === 1) {
-      this.navCtrl.push(RestaurantPage);
+      //this.navCtrl.push(RestaurantPage);
+      this.navCtrl.setRoot(RestaurantPage);
     } else {
       this.navCtrl.push(RegisterPage);
     }
@@ -56,7 +57,7 @@ export class HomePage {
         message: 'Email o contraseña incorrectas',
         buttons: ['Aceptar']
       });
-    }else{
+    } else {
       alert = this.alerCtrl.create({
         title: 'Error',
         message: 'Error con el servidor',

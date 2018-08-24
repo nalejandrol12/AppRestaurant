@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar hideBackButton="false">
     <ion-title>Menu</ion-title>
   </ion-navbar>
 
@@ -38,7 +38,7 @@
     <ion-item *ngFor="let item2 of listTipico">
       <ion-card>
         <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item2);" class="">{{item2.name}}</a></h2>
+          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item2,0);" class="">{{item2.name}}</a></h2>
         </ion-card-header>
       </ion-card>
     </ion-item>
@@ -46,7 +46,7 @@
     <ion-item *ngFor="let item3 of listCombo">
       <ion-card>
         <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item3);" class="">{{item3.name}}</a></h2>
+          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item3,1);" class="">{{item3.name}}</a></h2>
         </ion-card-header>
       </ion-card>
     </ion-item>
@@ -54,7 +54,7 @@
     <ion-item *ngFor="let item4 of listBebida">
       <ion-card>
         <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item4);" class="">{{item4.name}}</a></h2>
+          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item4,0);" class="">{{item4.name}}</a></h2>
         </ion-card-header>
       </ion-card>
     </ion-item>
@@ -62,7 +62,7 @@
     <ion-item *ngFor="let item5 of listAlcoholica">
       <ion-card>
         <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item5);" class="">{{item5.name}}</a></h2>
+          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item5,0);" class="">{{item5.name}}</a></h2>
         </ion-card-header>
       </ion-card>
     </ion-item>

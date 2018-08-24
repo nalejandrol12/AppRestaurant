@@ -14,6 +14,7 @@ import { InformationPage } from '../pages/information/information';
 import { InformationRequestedPage } from '../pages/information-requested/information-requested';
 import { SoftDrinksPage } from '../pages/soft-drinks/soft-drinks';
 import { RestaurantPage } from '../pages/restaurant/restaurant';
+import { InformationGeneralPage } from '../pages/information-general/information-general';
 import { DataServicesProvider } from '../providers/data-services/data-services';
 
 import { IonicStorageModule } from '@ionic/storage';
@@ -27,7 +28,8 @@ import { IonicStorageModule } from '@ionic/storage';
     InformationPage,
     InformationRequestedPage,
     SoftDrinksPage,
-    RestaurantPage
+    RestaurantPage,
+    InformationGeneralPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { IonicStorageModule } from '@ionic/storage';
     InformationPage,
     InformationRequestedPage,
     SoftDrinksPage,
-    RestaurantPage
+    RestaurantPage,
+    InformationGeneralPage
   ],
   providers: [
     StatusBar,
