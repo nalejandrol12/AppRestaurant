@@ -17,7 +17,7 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <img src="../../assets/imgs/imagen_combo.jpg">
+        <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
       </ion-col>
       <ion-col col-8>
         <h2 class="title_combo">{{item.name}}</h2>
@@ -30,29 +30,52 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <p class="txt_cash">Precio: {{item.price}}$</p>
+        <p class="txt_cash">
+          <b>Precio:</b> {{item.price}}$</p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <p class="txt_juice">Escoge bebida: </p>
-      </ion-col>
-      <ion-col>
-        <button ion-button (click)="NavigationSoftDrinks();">
-          Bebida
-        </button>
+        <div class="div_drink">
+          <h2>Escoje tu bebida</h2>
+        </div>
       </ion-col>
     </ion-row>
-    <ion-row class="btns">
-      <ion-col col-6>
-        <button ion-button class="btn_add" (click)="showToast('top');">
-          Añadir
-        </button>
+    <ion-row>
+      <ion-item>
+        <ion-label>Bebida</ion-label>
+        <ion-select [(ngModel)]="drink" okText="Okay" cancelText="Dismiss" interface="popover">
+          <ion-option value="Coca-cola">Coca-cola</ion-option>
+          <ion-option value="n64">Nintendo64</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <div class="div_notas">
+              <h2>Notas</h2>
+            </div>
+          </ion-col>
+        </ion-row>
       </ion-col>
-      <ion-col col-6>
-        <button ion-button class="btn_verify" (click)="NavigationInformationRequested();">
-          Nota
-        </button>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="btns">
+          <button ion-button class="btn_add" (click)="showToast('top');">
+            Añadir
+          </button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

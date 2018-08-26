@@ -25,13 +25,14 @@ page-information {
   .txt_cash {
     margin-top: -1px;
   }
-  .btn_verify,
   .btn_add {
     font-size: 19px;
-    width: 150px;
+    width: 220px;
+    border-radius: 20px;
   }
   .btns {
     margin-top: 10%;
+    text-align: center;
   }
   .header,
   .toolbar,
@@ -40,5 +41,11 @@ page-information {
   }
   .toolbar-title{
     color: #fff;
+  }
+  .div_drink, .div_notas{
+    text-align: center;
+  }
+  .div_notas{
+    margin-top: 20px;
   }
 }
