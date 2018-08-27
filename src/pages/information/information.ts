@@ -20,11 +20,10 @@ export class InformationPage {
 
   private drink:string;
   item;
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
      public toastCtrl: ToastController) {
       this.item = navParams.data.item;
-      this.drink = 'Coca-cola';
   }
 
   ionViewDidLoad() {

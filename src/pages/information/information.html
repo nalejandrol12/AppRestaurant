@@ -45,9 +45,7 @@
       <ion-item>
         <ion-label>Bebida</ion-label>
         <ion-select [(ngModel)]="drink" okText="Okay" cancelText="Dismiss" interface="popover">
-          <ion-option value="Coca-cola">Coca-cola</ion-option>
-          <ion-option value="n64">Nintendo64</ion-option>
-          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="{{item2}}"  *ngFor="let item2 of item.drink">{{item2}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-row>

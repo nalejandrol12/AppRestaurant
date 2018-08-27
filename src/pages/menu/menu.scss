@@ -5,7 +5,7 @@ page-menu {
   .title_history {
     text-align: center;
     color: #333;
-    font-size: 30px;
+    font-size: 33px;
   }
   .div_title {
     margin: 30px 0px 20px 0px;
@@ -29,26 +29,37 @@ page-menu {
   .col-center {
     text-align: center;
   }
-  .div_name {
-    background-image: url('../../assets/imgs/fondo2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 200px;
-    height: 200px;
-    padding: 40px 0px 0px 0px;
+  img{
+    position: relative;
+    opacity: 0.5;
   }
-  .h2_text {
+  .h2_text, .h2_text2 {
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 33px;
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+  }
+  .h2_text2{
+    top: -160px;
+  }
+  .h2_text{
+    top: -130px;
   }
   .header_text {
     font-size: 20px;
   }
   .h2_name {
-    font-size: 20px;
+    font-size: 25px;
   }
   a {
     display: block;
+    color: #333;
+  }
+  .label{
+    font-size: 27px;
     color: #333;
   }
 }
