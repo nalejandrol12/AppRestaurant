@@ -15,6 +15,7 @@ import { InformationRequestedPage } from '../pages/information-requested/informa
 import { SoftDrinksPage } from '../pages/soft-drinks/soft-drinks';
 import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { InformationGeneralPage } from '../pages/information-general/information-general';
+import { ComparePage } from '../pages/compare/compare';
 import { DataServicesProvider } from '../providers/data-services/data-services';
 
 import { IonicStorageModule } from '@ionic/storage';
@@ -29,7 +30,8 @@ import { IonicStorageModule } from '@ionic/storage';
     InformationRequestedPage,
     SoftDrinksPage,
     RestaurantPage,
-    InformationGeneralPage
+    InformationGeneralPage,
+    ComparePage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { IonicStorageModule } from '@ionic/storage';
     InformationRequestedPage,
     SoftDrinksPage,
     RestaurantPage,
-    InformationGeneralPage
+    InformationGeneralPage,
+    ComparePage
   ],
   providers: [
     StatusBar,

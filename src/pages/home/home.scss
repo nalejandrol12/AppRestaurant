@@ -2,6 +2,15 @@ page-home {
     .content_image_sign {
       margin: 10% 0% 10% 0%;
     }
+    .container_sign_in{
+      background-image: url(../../assets/imgs/fondo3.jpg);
+      background-size: 100%;
+    }
+    .txt_register{
+      background: rgba(255, 255, 255, 0.7);
+      padding: 4px 10px 8px 4px;
+      border-radius: 10px;
+    }
     .content_image_sign,
     .btn_sign_in {
       text-align: center;
@@ -11,7 +20,7 @@ page-home {
       width: 35%;
       height: 30%;
       border-radius: 50%;
-      border: 3px ridge #F23333;
+      border: 3px ridge #333;
     }
     .btn_in {
       width: 100%;

@@ -20,6 +20,24 @@
   </div>
 
   <ion-list>
+    <ion-item>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-9>
+                <h2 class="h2_all">Compara precio <br>y tiempo</h2>
+              </ion-col>
+              <ion-col col-3>
+                <button ion-button full class="btn_all" (click)="NavigationCompare();">
+                  Ir
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
     <ion-item-sliding *ngFor="let item of listHistory">
       <ion-item>
         <ion-card>
@@ -34,7 +52,7 @@
                 <div class="div_restaurtant">
                   <ion-col col-5>
                     <ion-thumbnail item-start>
-                      <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
+                      <img src="http://localhost:3001/api/images/{{item.image}}">
                     </ion-thumbnail>
                   </ion-col>
 
@@ -60,4 +78,5 @@
       </ion-item>
     </ion-item-sliding>
   </ion-list>
+
 </ion-content>

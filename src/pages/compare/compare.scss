@@ -1,0 +1,52 @@
+page-compare {
+
+    .div_segment{
+        margin-block-end: 4px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .header, .toolbar-background{
+        background: #F23333;
+    }
+    .test{
+        background: #333 !important;
+    }
+    .toolbar-title{
+        color: #fff;
+    }
+    .div_content{
+        background-image: url(../../assets/imgs/fondo3.jpg);
+        background-size: 100%;
+    }
+    .segment-md .segment-button{
+        color: #333;
+        font-size: 20px;
+    }
+    .segment-md .segment-button.segment-activated{
+        border-color: #333;
+    }
+    .search_input{
+        width: 100%;
+        height: 90%;
+        font-size: 18px;
+        padding-left: 20px;
+        border: 1px solid rgb(206, 212, 218); 
+        border-radius: 220px;
+    }
+    .btn_search{
+        background:rgba(206, 212, 218, 0.8); 
+        padding: 14px;
+        border-radius: 20px;
+    }
+    .icon-size{
+        font-size: 30px;
+        padding: 0%;
+        color: #000;
+    }
+    .search_div{
+        margin-block-end: 20px;
+    }
+    .test-h1{
+        text-transform: capitalize;
+    }
+
+}

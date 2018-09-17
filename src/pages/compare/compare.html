@@ -1,0 +1,68 @@
+<!--
+  Generated template for the ComparePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Comparar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="div_content">
+  <div class="search_div">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <input type="search" name="search2" [(ngModel)]="search2" class="search_input" placeholder="Buscar por nombre">
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button class="btn_search" (click)="onGet();">
+            <ion-icon name="search" class="icon-size"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="div_segment">
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="price">
+        Precio
+      </ion-segment-button>
+      <ion-segment-button value="time">
+        Tiempo
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'price'">
+      <ion-item *ngFor="let item of listPrice">
+        <ion-thumbnail item-start>
+          <img src="http://localhost:3001/api/images/{{item.image}}">
+        </ion-thumbnail>
+        <h1 class="test-h1">{{item.name_local}}</h1>
+        <h2>{{item.address_local}}</h2>
+        <h2>{{item.price}}</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'time'">
+      <ion-item *ngFor="let item2 of listTime">
+        <ion-thumbnail item-start>
+          <img src="http://localhost:3001/api/images/{{item2.image}}">
+        </ion-thumbnail>
+        <h1 class="test-h1">{{item2.name_local}}</h1>
+        <h2>{{item2.address_local}}</h2>
+        <h2>{{item2.time}} min</h2>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

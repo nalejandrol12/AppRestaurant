@@ -12,8 +12,10 @@ export class DataServicesProvider {
 
   private _registerUrl = "https://app-restaurante.herokuapp.com/api/signup";
   private _loginUrl = "https://app-restaurante.herokuapp.com/api/signin";
-  private _localUrl = "https://app-restaurante.herokuapp.com/api/local";
+  private _localUrl = "http://localhost:3001/api/local";
   private _productUrl = "https://app-restaurante.herokuapp.com/api/product/";
+  private _comparationUrl = "http://localhost:3001/api/name/"
+  private _comparation2Url = "http://localhost:3001/api/name2/"
 
   constructor(public http: HttpClient) {
     console.log('Hello DataServicesProvider Provider');
@@ -35,6 +37,14 @@ export class DataServicesProvider {
 
   getProduct(data:string){
     return this.http.get<any>(this._productUrl+data);
+  }
+  
+  getComparation(data:string){
+    return this.http.get<any>(this._comparationUrl+data);
+  }
+
+  getComparation2(data:string){
+    return this.http.get<any>(this._comparation2Url+data);
   }
 
 }

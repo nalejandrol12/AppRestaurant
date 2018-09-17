@@ -1,7 +1,18 @@
 page-restaurant {
+  .item-md, .list-md ion-item-sliding{
+    background: none;
+  }
+  .container_restaurant{
+    background-image: url(../../assets/imgs/fondo3.jpg);
+    background-size: 100%;
+  }
+  .container_restaurant:before{
+    background-color: #fff;
+    position: absolute;
+  }
   .title_history {
     text-align: center;
-    color: #333;
+    color: #000;
     font-size: 200%;
   }
   .div_title {
@@ -34,5 +45,14 @@ page-restaurant {
   }
   .div_information{
     padding: 10px 0px 0px 0px;
+  }
+  .h2_all{
+    font-size: 20px;
+    padding-top: 12px;
+  }
+  .btn_all{
+    background-color: #333;
+    border-radius: 20px;
+    font-size: 17px;
   }
 }
