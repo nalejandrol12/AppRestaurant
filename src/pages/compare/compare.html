@@ -44,18 +44,18 @@
     <ion-list *ngSwitchCase="'price'">
       <ion-item *ngFor="let item of listPrice">
         <ion-thumbnail item-start>
-          <img src="http://localhost:3001/api/images/{{item.image}}">
+          <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
         </ion-thumbnail>
         <h1 class="test-h1">{{item.name_local}}</h1>
         <h2>{{item.address_local}}</h2>
-        <h2>{{item.price}}</h2>
+        <h2>Precio: {{item.price}}$</h2>
       </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'time'">
       <ion-item *ngFor="let item2 of listTime">
         <ion-thumbnail item-start>
-          <img src="http://localhost:3001/api/images/{{item2.image}}">
+          <img src="https://app-restaurante.herokuapp.com/api/images/{{item2.image}}">
         </ion-thumbnail>
         <h1 class="test-h1">{{item2.name_local}}</h1>
         <h2>{{item2.address_local}}</h2>
