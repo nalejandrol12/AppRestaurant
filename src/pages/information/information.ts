@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { InformationRequestedPage } from '../information-requested/information-requested';
-import { SoftDrinksPage } from '../soft-drinks/soft-drinks';
 
 /**
  * Generated class for the InformationPage page.
@@ -38,10 +37,6 @@ export class InformationPage {
     });
 
     toast.present(toast);
-  }
-
-  NavigationSoftDrinks(){
-    this.navCtrl.push(SoftDrinksPage);
   }
 
   NavigationInformationRequested(){

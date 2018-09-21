@@ -3,6 +3,7 @@ page-restaurant {
     background: none;
   }
   .container_restaurant{
+    font-family: 'Barlow Semi Condensed', sans-serif;
     background-image: url(https://app-restaurante.herokuapp.com/api/images/fondo3.jpg);
     background-size: 100%;
   }
@@ -16,7 +17,13 @@ page-restaurant {
     font-size: 200%;
   }
   .div_title {
-    margin: 30px 0px 20px 0px;
+    margin: 20px 20px 20px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    width: 87%;
+    height: 10%;
+    padding-top: 10px;
+    border-radius: 10px;
   }
   .div_add {
     font-size: 20px;
@@ -28,6 +35,11 @@ page-restaurant {
     height: 100%;
     border: 2px solid #F23333;
     border-radius: 10px;
+  }
+  .item-md ion-thumbnail img{
+    width: 90px;
+    height: 90px;
+    margin-top: 15px;
   }
   .header, .toolbar, .toolbar-background{
     background: #F23333;
@@ -46,13 +58,7 @@ page-restaurant {
   .div_information{
     padding: 10px 0px 0px 0px;
   }
-  .h2_all{
-    font-size: 20px;
-    padding-top: 12px;
-  }
-  .btn_all{
-    background-color: #333;
-    border-radius: 20px;
-    font-size: 17px;
+  .bar-button-default-md{
+    color: #fff;
   }
 }

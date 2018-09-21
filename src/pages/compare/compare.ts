@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InformationPage } from '../information/information';
+import { InformationGeneralPage } from '../information-general/information-general';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
 
 /**
@@ -28,7 +30,7 @@ export class ComparePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ComparePage');
   }
-  onGet(){
+  onGet() {
     this.dataService.getComparation(this.search2).subscribe(res => {
       this.listPrice = res;
       this.pet = "price";
@@ -42,6 +44,14 @@ export class ComparePage {
       console.log(err);
     })
 
+  }
+
+  informationNavigation(item, category: any) {
+    if (category != "COMBOS") {
+      this.navCtrl.push(InformationGeneralPage, { item: item });
+    } else {
+      this.navCtrl.push(InformationPage, { item: item });
+    }
   }
 
 }

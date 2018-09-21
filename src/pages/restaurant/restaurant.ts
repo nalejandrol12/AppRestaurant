@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MenuPage } from '../menu/menu';
-import { ComparePage } from '../compare/compare';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
 
 /**
@@ -30,10 +29,6 @@ export class RestaurantPage {
 
   NavigationMenuPage(item) {
     this.navCtrl.push(MenuPage, { item: item });
-  }
-
-  NavigationCompare(){
-    this.navCtrl.push(ComparePage);
   }
 
   getLocal() {

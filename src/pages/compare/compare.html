@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Comparar</ion-title>
   </ion-navbar>
 
@@ -42,13 +45,14 @@
 
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchCase="'price'">
-      <ion-item *ngFor="let item of listPrice">
+      <ion-item *ngFor="let item of listPrice" (click)="informationNavigation(item,item.category);">
         <ion-thumbnail item-start>
           <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
         </ion-thumbnail>
         <h1 class="test-h1">{{item.name_local}}</h1>
-        <h2>{{item.address_local}}</h2>
-        <h2>Precio: {{item.price}}$</h2>
+        <h2><b>Dirección:</b> <br> {{item.address_local}}</h2>
+        <h2><b>Precio:</b> {{item.price}}$</h2>
+        <h2><b>Tiempo total:</b> <br> {{item.total_time}} min "Estimado"</h2>
       </ion-item>
     </ion-list>
 
@@ -58,8 +62,11 @@
           <img src="https://app-restaurante.herokuapp.com/api/images/{{item2.image}}">
         </ion-thumbnail>
         <h1 class="test-h1">{{item2.name_local}}</h1>
-        <h2>{{item2.address_local}}</h2>
-        <h2>{{item2.time}} min</h2>
+        <h2><b>Dirección:</b> <br> {{item2.address_local}}
+        </h2>
+        <h2><b>Tiempo de llegada:</b> <br> {{item2.time_arrival}} min "Aproximado"</h2>
+        <h2><b>Tiempo de preparación:</b> <br> {{item2.preparation_time}} min "Aproximado"</h2>
+        <h2><b>Tiempo total:</b> <br> {{item2.total_time}} min "Estimado"</h2>
       </ion-item>
     </ion-list>
 

@@ -14,67 +14,69 @@
 
 
 <ion-content padding class="container_information">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
-      </ion-col>
-      <ion-col col-8>
-        <h2 class="title_combo">{{item.name}}</h2>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="txt_description">{{item.description}}</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="txt_cash">
-          <b>Precio:</b> {{item.price}}$</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="div_drink">
-          <h2>Escoje tu bebida</h2>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-item>
-        <ion-label>Bebida</ion-label>
-        <ion-select [(ngModel)]="drink" okText="Okay" cancelText="Dismiss" interface="popover">
-          <ion-option value="{{item2}}"  *ngFor="let item2 of item.drink">{{item2}}</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-row>
-          <ion-col>
-            <div class="div_notas">
-              <h2>Notas</h2>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
+  <div class="div-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
+        </ion-col>
+        <ion-col col-8>
+          <h2 class="title_combo">{{item.name}}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="txt_description">{{item.description}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="txt_cash">
+            <b>Precio:</b> {{item.price}}$</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="div_drink">
+            <h2>Escoje tu bebida</h2>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
         <ion-item>
-          <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+          <ion-label>Bebida</ion-label>
+          <ion-select [(ngModel)]="drink" okText="Okay" cancelText="Dismiss" interface="popover">
+            <ion-option value="{{item2}}" *ngFor="let item2 of item.drink">{{item2}}</ion-option>
+          </ion-select>
         </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="btns">
-          <button ion-button class="btn_add" (click)="showToast('top');">
-            Añadir
-          </button>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-col>
+              <div class="div_notas">
+                <h2>Notas</h2>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="btns">
+            <button ion-button class="btn_add" (click)="showToast('top');">
+              Añadir
+            </button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

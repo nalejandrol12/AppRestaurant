@@ -18,6 +18,7 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
 })
 export class MenuPage {
   item;
+  pet: string = "TIPICO";
   private listTipico: any = [];
   private listCombo: any = [];
   private listBebida: any = [];

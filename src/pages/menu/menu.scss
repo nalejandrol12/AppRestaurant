@@ -1,6 +1,25 @@
 page-menu {
   .container_menu {
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-image: url(https://app-restaurante.herokuapp.com/api/images/fondo3.jpg);
+    background-size: 100%;
+  }
+  .div_segment{
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 87%;
+    height: 10%;
+    border-radius: 10px;
+  }
+  .item-color{
+    background: none !important;
+  }
+  .h2-menu{
+    padding-top: 5px;
+    font-size: 30px;
   }
   .title_history {
     text-align: center;
@@ -26,42 +45,37 @@ page-menu {
   .toolbar-title {
     color: #fff;
   }
-  .col-center {
-    text-align: center;
-  }
-  img{
-    position: relative;
-    opacity: 0.5;
-    width: 100%;
-    height: 200px;
-  }
   .h2_text, .h2_text2 {
     text-transform: capitalize;
     font-size: 33px;
-    position: absolute;
-    margin-left:auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-  }
-  .h2_text2{
-    top: -160px;
-  }
-  .h2_text{
-    top: -130px;
-  }
-  .header_text {
-    font-size: 20px;
   }
   .h2_name {
     font-size: 25px;
   }
-  a {
-    display: block;
+  .label{
+    font-size: 25px;
     color: #333;
   }
-  .label{
-    font-size: 27px;
-    color: #333;
+  img{
+    border-radius: 10px;
+  }
+  .item-md ion-thumbnail img{
+    width: 100%;
+    height: 200px;
+  }
+  .item-md ion-thumbnail[item-start] {
+    margin: 0;
+  }
+  .item-md {
+    border-radius: 5px;
+  }
+  .div-name{
+    text-align: center;
+  }
+  .select-text {
+  font-size: 20px;
+  }
+  .bar-button-default-md{
+    color: #fff;
   }
 }

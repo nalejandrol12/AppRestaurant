@@ -14,35 +14,37 @@
 
 
 <ion-content padding class="container_information">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
-      </ion-col>
-      <ion-col col-8>
-        <h2 class="title_combo">{{item.name}}</h2>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="txt_description">{{item.description}}</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="txt_cash">Precio: {{item.price}}$</p>
-      </ion-col>
-    </ion-row>
-    <div class="div_notas">
-      <h2>Notas</h2>
-    </div>
-    <ion-item>
-      <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
-    </ion-item>
-    <div class="btns">
-      <button ion-button class="btn_add">
-        Añadir
-      </button>
-    </div>
-  </ion-grid>
+  <div class="div-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
+        </ion-col>
+        <ion-col col-8>
+          <h2 class="title_combo">{{item.name}}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="txt_description">{{item.description}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="txt_cash">Precio: {{item.price}}$</p>
+        </ion-col>
+      </ion-row>
+      <div class="div_notas">
+        <h2>Notas</h2>
+      </div>
+      <ion-item>
+        <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+      </ion-item>
+      <div class="btns">
+        <button ion-button class="btn_add">
+          Añadir
+        </button>
+      </div>
+    </ion-grid>
+  </div>
 </ion-content>

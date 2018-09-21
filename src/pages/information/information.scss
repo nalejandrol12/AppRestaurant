@@ -1,4 +1,14 @@
 page-information {
+  .container_information{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-image: url(https://app-restaurante.herokuapp.com/api/images/fondo3.jpg);
+    background-size: 100%;
+  }
+  .div-container{
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px 5px 12px 5px;
+    border-radius: 5px;
+  }
   img {
     width: 100px;
     height: 100px;
@@ -28,6 +38,7 @@ page-information {
   .btn_add {
     font-size: 19px;
     width: 220px;
+    background-color: #333;
     border-radius: 20px;
   }
   .btns {
@@ -47,5 +58,12 @@ page-information {
   }
   .div_notas{
     margin-top: 20px;
+  }
+  .item.item-textarea {
+    height: 100px;
+    border-radius: 5px;
+  }
+  .bar-button-default-md{
+    color: #fff;
   }
 }

@@ -15,72 +15,122 @@
 
 <ion-content padding class="container_menu">
 
-  <!-- <div class="div_name">
-    <ion-grid>
-      <ion-row>
-        <ion-col class="col-center">
-          <h2 class="h2_text">{{item.name}}</h2>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="col-center">
-          <h2 class="h2_text">{{item.phone}}</h2>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div> -->
-  <div class="div_name">
-    <img src="https://app-restaurante.herokuapp.com/api/images/fondo3.jpg" alt="">
-    <ion-grid>
-      <ion-row>
-        <ion-col class="col-center">
-          <h2 class="h2_text2">{{item.name}}</h2>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="col-center">
-          <h2 class="h2_text">{{item.phone}}</h2>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  <div class="div_title">
-    <h1 class="title_history">Menu</h1>
+  <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select [(ngModel)]="pet" interface="popover">
+      <ion-option value="TIPICO">Tipico</ion-option>
+      <ion-option value="COMBOS">Combos</ion-option>
+      <ion-option value="BEBIDAS">Bebida</ion-option>
+      <ion-option value="ALCOHOLICAS">Bebidas Alcoholicas</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <div class="div_segment">
+    <h2 class="h2-menu">Menu</h2>
   </div>
 
-  <ion-list>
-    <ion-list-header class="header_text">TIPICO</ion-list-header>
-    <ion-item *ngFor="let item2 of listTipico">
-      <ion-card>
-        <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item2,0);" class="">{{item2.name}}</a></h2>
-        </ion-card-header>
-      </ion-card>
-    </ion-item>
-    <ion-list-header class="header_text">COMBOS</ion-list-header>
-    <ion-item *ngFor="let item3 of listCombo">
-      <ion-card>
-        <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item3,1);" class="">{{item3.name}}</a></h2>
-        </ion-card-header>
-      </ion-card>
-    </ion-item>
-    <ion-list-header class="header_text">BEBIDAS</ion-list-header>
-    <ion-item *ngFor="let item4 of listBebida">
-      <ion-card>
-        <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item4,0);" class="">{{item4.name}}</a></h2>
-        </ion-card-header>
-      </ion-card>
-    </ion-item>
-    <ion-list-header class="header_text">BEBIDAS ALCOHOLICAS</ion-list-header>
-    <ion-item *ngFor="let item5 of listAlcoholica">
-      <ion-card>
-        <ion-card-header>
-          <h2 class="h2_name"><a (click)="NavigationHistoryInformationPage(item5,0);" class="">{{item5.name}}</a></h2>
-        </ion-card-header>
-      </ion-card>
-    </ion-item>
-  </ion-list>
+  <div [ngSwitch]="pet">
+
+    <ion-list *ngSwitchCase="'TIPICO'">
+      <ion-item class="item-color" *ngFor="let item2 of listTipico" (click)="NavigationHistoryInformationPage(item2,0);">
+        <ion-card>
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col col>
+                  <ion-thumbnail item-start>
+                    <img src="https://app-restaurante.herokuapp.com/api/images/{{item2.image}}">
+                  </ion-thumbnail>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="div-name">
+                    <h2 class="h2_name">{{item2.name}}</h2>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'COMBOS'">
+      <ion-item class="item-color" *ngFor="let item3 of listCombo" (click)="NavigationHistoryInformationPage(item3,1);">
+        <ion-card>
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col col>
+                  <ion-thumbnail item-start>
+                    <img src="https://app-restaurante.herokuapp.com/api/images/{{item3.image}}">
+                  </ion-thumbnail>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="div-name">
+                    <h2 class="h2_name">{{item3.name}}</h2>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'BEBIDAS'">
+      <ion-item class="item-color" *ngFor="let item4 of listBebida" (click)="NavigationHistoryInformationPage(item4,0);">
+        <ion-card>
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col col>
+                  <ion-thumbnail item-start>
+                    <img src="https://app-restaurante.herokuapp.com/api/images/{{item4.image}}">
+                  </ion-thumbnail>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="div-name">
+                    <h2 class="h2_name">{{item4.name}}</h2>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'ALCOHOLICAS'">
+      <ion-item class="item-color" *ngFor="let item5 of listAlcoholica" (click)="NavigationHistoryInformationPage(item5,0);">
+        <ion-card>
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col col>
+                  <ion-thumbnail item-start>
+                    <img src="https://app-restaurante.herokuapp.com/api/images/{{item5.image}}">
+                  </ion-thumbnail>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="div-name">
+                    <h2 class="h2_name">{{item5.name}}</h2>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+  </div>
 
 </ion-content>

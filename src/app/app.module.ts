@@ -8,56 +8,46 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RegisterPage } from '../pages/register/register';
-import { MenuPage } from '../pages/menu/menu';
-import { InformationPage } from '../pages/information/information';
-import { InformationRequestedPage } from '../pages/information-requested/information-requested';
-import { SoftDrinksPage } from '../pages/soft-drinks/soft-drinks';
-import { RestaurantPage } from '../pages/restaurant/restaurant';
-import { InformationGeneralPage } from '../pages/information-general/information-general';
-import { ComparePage } from '../pages/compare/compare';
+import { RegisterPageModule } from '../pages/register/register.module';
+import { MenuPageModule } from '../pages/menu/menu.module';
+import { InformationPageModule } from '../pages/information/information.module';
+import { InformationRequestedPageModule } from '../pages/information-requested/information-requested.module';
+import { RestaurantPageModule } from '../pages/restaurant/restaurant.module';
+import { InformationGeneralPageModule } from '../pages/information-general/information-general.module';
+import { ComparePageModule } from '../pages/compare/compare.module';
 import { DataServicesProvider } from '../providers/data-services/data-services';
 
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    RegisterPage,
-    MenuPage,
-    InformationPage,
-    InformationRequestedPage,
-    SoftDrinksPage,
-    RestaurantPage,
-    InformationGeneralPage,
-    ComparePage
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    RegisterPage,
-    MenuPage,
-    InformationPage,
-    InformationRequestedPage,
-    SoftDrinksPage,
-    RestaurantPage,
-    InformationGeneralPage,
-    ComparePage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataServicesProvider
-  ]
+ declarations: [
+   MyApp,
+   HomePage
+ ],
+ imports: [
+   BrowserModule,
+   FormsModule,
+   HttpClientModule,
+   ComparePageModule,
+   RegisterPageModule,
+   MenuPageModule,
+   InformationPageModule,
+   InformationRequestedPageModule,
+   RestaurantPageModule,
+   InformationGeneralPageModule,
+   IonicStorageModule.forRoot(),
+   IonicModule.forRoot(MyApp)
+ ],
+ bootstrap: [IonicApp],
+ entryComponents: [
+   MyApp,
+   HomePage
+ ],
+ providers: [
+   StatusBar,
+   SplashScreen,
+   {provide: ErrorHandler, useClass: IonicErrorHandler},
+   DataServicesProvider
+ ]
 })
 export class AppModule {}
