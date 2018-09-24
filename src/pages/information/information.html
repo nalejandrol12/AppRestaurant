@@ -64,14 +64,14 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+            <ion-textarea name="notes" [(ngModel)]="notes" placeholder="Sugerencias para su pedido."></ion-textarea>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <div class="btns">
-            <button ion-button class="btn_add" (click)="showToast('top');">
+            <button ion-button class="btn_add"  (click)="onAdd();">
               Añadir
             </button>
           </div>

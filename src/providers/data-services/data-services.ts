@@ -14,8 +14,9 @@ export class DataServicesProvider {
   private _loginUrl = "https://app-restaurante.herokuapp.com/api/signin";
   private _localUrl = "https://app-restaurante.herokuapp.com/api/local";
   private _productUrl = "https://app-restaurante.herokuapp.com/api/product/";
-  private _comparationUrl = "https://app-restaurante.herokuapp.com/api/name/"
-  private _comparation2Url = "https://app-restaurante.herokuapp.com/api/name2/"
+  private _comparationUrl = "https://app-restaurante.herokuapp.com/api/name/";
+  private _comparation2Url = "https://app-restaurante.herokuapp.com/api/name2/";
+  private _orderUrl = "https://app-restaurante.herokuapp.com/api/order";
 
   constructor(public http: HttpClient) {
     console.log('Hello DataServicesProvider Provider');
@@ -45,6 +46,11 @@ export class DataServicesProvider {
 
   getComparation2(data:string){
     return this.http.get<any>(this._comparation2Url+data);
+  }
+
+  addOrder(list:any){
+    const data = { order: list };
+    return this.http.post<any>(this._orderUrl, data);
   }
 
 }

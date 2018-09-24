@@ -19,49 +19,58 @@
   <ion-grid>
     <ion-row>
       <ion-col class="title_orders">
-        <h3>Mis Pedidos</h3>
+        <div class="div-title">
+          <h2>Mis Pedidos</h2>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of listOrders">
       <ion-item>
         <ion-avatar item-start>
-          <img src="assets/imgs/imagen_catalogo.jpg">
+          <img src="https://app-restaurante.herokuapp.com/api/images/{{item.image}}">
         </ion-avatar>
-        <h2 class="item_orders">Croissant + bebida</h2>
-        <p class="item_orders">Precio: 3000$</p>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/imgs/imagen_buñuelo.jpg">
-        </ion-avatar>
-        <h2 class="item_orders">Buñuelo</h2>
-        <p class="item_orders">Precio: 1000$</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col col>
+              <h2 class="item_orders">{{item.name}}</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col>
+              <p class="item_orders">Notas: {{item.notes}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col>
+              <p class="item_orders">Precio: {{item.price}}$</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
       <ion-item-options side="right">
         <button ion-button class="delete" (click)="DeleteData(item.id);">
           <ion-icon name="trash"></ion-icon>
-          Delete
+          Eliminar
         </button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
 
-  <p class="txt_total">Total: 4000$</p>
+  <div class="total">
+    <p class="txt_total">Total: {{sum}}$</p>
+  </div>
 
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
-        <button ion-button class="btn_send">
-          Enviar Pedido
-        </button>
-      </ion-col>
-      <ion-col col-6>
-        <button ion-button class="btn_notes">
-          Notas
-        </button>
+      <ion-col>
+        <div class="btns">
+          <button ion-button class="btn_send" [disabled]="disabledButtonId == '1'" (click)="sendOrder();">
+            Enviar Pedido
+          </button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

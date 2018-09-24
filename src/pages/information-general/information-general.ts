@@ -20,6 +20,7 @@ import { RestaurantPage } from '../restaurant/restaurant';
 export class InformationGeneralPage {
 
   item;
+  private notes: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public storage: Storage) {
@@ -34,11 +35,27 @@ export class InformationGeneralPage {
     let listOrders = [];
     this.storage.get('orders').then((val) => {
       if (val == null) {
-        listOrders.push(this.item);
+        listOrders.push({
+          name: this.item.name,
+          image: this.item.image,
+          notes: this.notes,
+          price: this.item.price,
+          drink: null,
+          id_product: this.item._id,
+          id_local: this.item.id_local
+        });
         this.storage.set('orders', listOrders);
       } else {
         this.storage.get('orders').then((val) => {
-          val.push(this.item);
+          val.push({
+            name: this.item.name,
+            image: this.item.image,
+            notes: this.notes,
+            price: this.item.price,
+            drink: null,
+            id_product: this.item._id,
+            id_local: this.item.id_local
+          });
           this.storage.set('orders', val);
           /*this.storage.get('orders').then((val) => {
             console.log(val);

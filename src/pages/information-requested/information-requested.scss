@@ -14,13 +14,37 @@ page-information-requested {
         font-size: 25px;
     }
     .title_orders{
-        margin-top: 10px;
+        margin-top: 5px;
+    }
+    .div-title{
+        background: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        width: 100%;
+        padding-top: 10px;
+        padding-block-end: 5px;
+        border-radius: 10px;
+    }
+    .total{
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        border-radius: 10px;
+        padding: 2px 9px 2px 9px;
+    }
+    .item-md ion-avatar img {
+        width: 70px;
+        height: 70px;
     }
     .delete{
         background: #E10000  ;
     }
-    .btn_notes, .btn_send{
+    .btn_send{
         font-size: 19px;
-        width: 150px;
+        width: 180px;
+        background-color: #333;
+        border-radius: 20px;
+    }
+    .btns {
+        margin-top: 10%;
+        text-align: center;
     }
 }

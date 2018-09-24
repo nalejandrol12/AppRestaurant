@@ -38,7 +38,7 @@
         <h2>Notas</h2>
       </div>
       <ion-item>
-        <ion-textarea placeholder="Sugerencias para su pedido."></ion-textarea>
+        <ion-textarea name="notes" [(ngModel)]="notes" placeholder="Sugerencias para su pedido."></ion-textarea>
       </ion-item>
       <div class="btns">
         <button ion-button class="btn_add" (click)="onAdd();">
