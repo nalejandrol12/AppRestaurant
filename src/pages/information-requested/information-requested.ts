@@ -19,8 +19,9 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
 export class InformationRequestedPage {
 
   private listOrders = [];
-  private sum=0;
-  disabledButtonId:string;
+  private sum = 0;
+  disabledButtonId: string;
+  private userId = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public storage: Storage, public dataService: DataServicesProvider) {
@@ -30,23 +31,27 @@ export class InformationRequestedPage {
     this.onAdd();
   }
 
-  onAdd(){
+  onAdd() {
     this.storage.get('orders').then((val) => {
-        this.listOrders = val;
-        for(var i in val){
-          this.sum = this.sum + val[i].price;
-        }
-        console.log(val)
-        if(val==null){
-          this.disabledButtonId = "1";
-        }else{
-          this.disabledButtonId = "0";
-        }
+      this.listOrders = val;
+      for (var i in val) {
+        this.sum = this.sum + val[i].price;
+      }
+      if (val == null) {
+        this.disabledButtonId = "1";
+      } else {
+        this.disabledButtonId = "0";
+      }
     });
+    this.storage.get('id_user').then((res) => {
+      this.userId = res;
+    }, err => {
+      console.log(err);
+    })
   }
 
-  sendOrder(){
-    this.dataService.addOrder(this.listOrders).subscribe(res=>{
+  sendOrder() {
+    this.dataService.addOrder(this.listOrders, this.userId).subscribe(res => {
       this.storage.remove('orders');
       this.navCtrl.setRoot(RestaurantPage);
     }, err => {

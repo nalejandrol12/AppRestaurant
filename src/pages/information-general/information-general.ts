@@ -42,7 +42,8 @@ export class InformationGeneralPage {
           price: this.item.price,
           drink: null,
           id_product: this.item._id,
-          id_local: this.item.id_local
+          id_local: this.item.id_local,
+          
         });
         this.storage.set('orders', listOrders);
       } else {

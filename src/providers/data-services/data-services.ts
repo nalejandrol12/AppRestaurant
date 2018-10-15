@@ -48,8 +48,8 @@ export class DataServicesProvider {
     return this.http.get<any>(this._comparation2Url+data);
   }
 
-  addOrder(list:any){
-    const data = { order: list };
+  addOrder(list:any,userId:string){
+    const data = { order: list, id_user: userId };
     return this.http.post<any>(this._orderUrl, data);
   }
 
