@@ -22,7 +22,7 @@ export class InformationRequestedPage {
   private sum = 0;
   disabledButtonId: string;
   private userId = "";
-
+  private name = "";
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public storage: Storage, public dataService: DataServicesProvider) {
   }
@@ -47,11 +47,16 @@ export class InformationRequestedPage {
       this.userId = res;
     }, err => {
       console.log(err);
+    });
+    this.storage.get('nameUser').then((res1) => {
+      this.name = res1;
+    }, err => {
+      console.log(err);
     })
   }
 
   sendOrder() {
-    this.dataService.addOrder(this.listOrders, this.userId).subscribe(res => {
+    this.dataService.addOrder(this.listOrders, this.userId, this.name).subscribe(res => {
       this.storage.remove('orders');
       this.navCtrl.setRoot(RestaurantPage);
     }, err => {

@@ -42,6 +42,8 @@ export class RegisterPage {
     if (this.name != '' && this.phone != null && this.email != '' && this.password != '') {
       this.dataService.addCourses(this.name, this.cedula, this.phone, this.email, this.password, this.check)
         .subscribe(res => {
+          this.storage.set('id_user', res.id_user);
+          this.storage.set('nameUser', res.nameUser);
           this.storage.set('token', res.token);
           this.storage.get('token').then((val) => {
             if (val != '') {
@@ -49,7 +51,7 @@ export class RegisterPage {
               this.NavigationSelect();
             }
           });
-        }, err =>{
+        }, err => {
           console.log(err);
         })
     } else {

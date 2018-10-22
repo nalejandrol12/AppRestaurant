@@ -23,6 +23,7 @@ export class HomePage {
   onAdd() {
     this.dataService.addLogin(this.email, this.password).subscribe(res => {
       this.storage.set('id_user', res.id_user);
+      this.storage.set('nameUser', res.nameUser);
       this.storage.set('token', res.token);
       this.storage.get('token').then((val) => {
         if (val != '') {
